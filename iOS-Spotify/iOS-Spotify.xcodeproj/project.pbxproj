@@ -18,6 +18,11 @@
 		7511A9C9265CA294007D9ECD /* iOS_SpotifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7511A9C8265CA294007D9ECD /* iOS_SpotifyTests.swift */; };
 		7511A9D4265CA294007D9ECD /* iOS_SpotifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7511A9D3265CA294007D9ECD /* iOS_SpotifyUITests.swift */; };
 		7511A9E9265CA483007D9ECD /* TrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7511A9E8265CA483007D9ECD /* TrackResponse.swift */; };
+		75746A8A265CAA3F00CFC60C /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75746A88265CAA3F00CFC60C /* TrackTableViewCell.swift */; };
+		75746A8B265CAA3F00CFC60C /* TrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75746A89265CAA3F00CFC60C /* TrackTableViewCell.xib */; };
+		75746A91265CB77B00CFC60C /* TrackServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75746A90265CB77B00CFC60C /* TrackServices.swift */; };
+		75746A9A265CB96D00CFC60C /* ConvertString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75746A99265CB96D00CFC60C /* ConvertString.swift */; };
+		75746A9F265CC23B00CFC60C /* Extention+ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75746A9E265CC23B00CFC60C /* Extention+ImageView.swift */; };
 		7C7582134B9E0A82FEDDE470 /* Pods_iOS_SpotifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4130CE3209F15E4B78BA4421 /* Pods_iOS_SpotifyTests.framework */; };
 		851B6614E671190681173C26 /* Pods_iOS_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7894BC7890D95633CC9DF4D0 /* Pods_iOS_Spotify.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +66,11 @@
 		7511A9D3265CA294007D9ECD /* iOS_SpotifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_SpotifyUITests.swift; sourceTree = "<group>"; };
 		7511A9D5265CA294007D9ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7511A9E8265CA483007D9ECD /* TrackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackResponse.swift; sourceTree = "<group>"; };
+		75746A88265CAA3F00CFC60C /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		75746A89265CAA3F00CFC60C /* TrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
+		75746A90265CB77B00CFC60C /* TrackServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackServices.swift; sourceTree = "<group>"; };
+		75746A99265CB96D00CFC60C /* ConvertString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertString.swift; sourceTree = "<group>"; };
+		75746A9E265CC23B00CFC60C /* Extention+ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+ImageView.swift"; sourceTree = "<group>"; };
 		7894BC7890D95633CC9DF4D0 /* Pods_iOS_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE97E240C61A1FAFD5FFEF8E /* Pods-iOS-Spotify-iOS-SpotifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Spotify-iOS-SpotifyUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS-Spotify-iOS-SpotifyUITests/Pods-iOS-Spotify-iOS-SpotifyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3A923BB2C3AD47C743A4E26 /* Pods_iOS_Spotify_iOS_SpotifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Spotify_iOS_SpotifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +153,9 @@
 		7511A9AD265CA292007D9ECD /* iOS-Spotify */ = {
 			isa = PBXGroup;
 			children = (
+				75746A98265CB95E00CFC60C /* Helpers */,
+				75746A8F265CB77000CFC60C /* Services */,
+				75746A87265CA9FA00CFC60C /* View */,
 				7511A9E7265CA466007D9ECD /* Models */,
 				7511A9AE265CA292007D9ECD /* AppDelegate.swift */,
 				7511A9B0265CA292007D9ECD /* SceneDelegate.swift */,
@@ -180,6 +193,32 @@
 				7511A9E8265CA483007D9ECD /* TrackResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		75746A87265CA9FA00CFC60C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75746A88265CAA3F00CFC60C /* TrackTableViewCell.swift */,
+				75746A89265CAA3F00CFC60C /* TrackTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		75746A8F265CB77000CFC60C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				75746A90265CB77B00CFC60C /* TrackServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		75746A98265CB95E00CFC60C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				75746A99265CB96D00CFC60C /* ConvertString.swift */,
+				75746A9E265CC23B00CFC60C /* Extention+ImageView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +332,7 @@
 				7511A9BE265CA294007D9ECD /* LaunchScreen.storyboard in Resources */,
 				7511A9BB265CA294007D9ECD /* Assets.xcassets in Resources */,
 				7511A9B6265CA292007D9ECD /* Main.storyboard in Resources */,
+				75746A8B265CAA3F00CFC60C /* TrackTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,9 +461,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7511A9B9265CA292007D9ECD /* iOS_Spotify.xcdatamodeld in Sources */,
+				75746A8A265CAA3F00CFC60C /* TrackTableViewCell.swift in Sources */,
 				7511A9B3265CA292007D9ECD /* ViewController.swift in Sources */,
+				75746A91265CB77B00CFC60C /* TrackServices.swift in Sources */,
+				75746A9F265CC23B00CFC60C /* Extention+ImageView.swift in Sources */,
 				7511A9AF265CA292007D9ECD /* AppDelegate.swift in Sources */,
 				7511A9E9265CA483007D9ECD /* TrackResponse.swift in Sources */,
+				75746A9A265CB96D00CFC60C /* ConvertString.swift in Sources */,
 				7511A9B1265CA292007D9ECD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

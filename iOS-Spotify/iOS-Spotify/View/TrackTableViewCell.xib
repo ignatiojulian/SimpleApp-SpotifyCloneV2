@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackTableViewCell" rowHeight="184" id="KGk-i7-Jjw" customClass="TrackTableViewCell" customModule="iOS_Spotify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="635" height="184"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="635" height="184"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qee-K3-aDh">
+                        <rect key="frame" x="0.0" y="0.0" width="635" height="184"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xd8-P6-mHP">
+                                <rect key="frame" x="18" y="22" width="129" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xd8-P6-mHP" secondAttribute="height" multiplier="129:140" id="2Ea-pC-O9c"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kp-71-2ne">
+                                <rect key="frame" x="168" y="90" width="450" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="4dy-K0-86q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvS-IE-aFc">
+                                <rect key="frame" x="168" y="30" width="450" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gya-4X-FCD">
+                                <rect key="frame" x="168" y="124" width="450" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Kp-71-2ne" firstAttribute="top" secondItem="LvS-IE-aFc" secondAttribute="bottom" constant="25" id="Ib9-NM-o0c"/>
+                            <constraint firstAttribute="trailing" secondItem="LvS-IE-aFc" secondAttribute="trailing" constant="17" id="NfY-aX-GDQ"/>
+                            <constraint firstItem="7Kp-71-2ne" firstAttribute="trailing" secondItem="LvS-IE-aFc" secondAttribute="trailing" id="Sp7-mu-tVE"/>
+                            <constraint firstItem="Xd8-P6-mHP" firstAttribute="leading" secondItem="qee-K3-aDh" secondAttribute="leading" constant="18" id="UUA-x6-MFg"/>
+                            <constraint firstItem="LvS-IE-aFc" firstAttribute="leading" secondItem="Xd8-P6-mHP" secondAttribute="trailing" constant="21" id="XhL-CS-8Wh"/>
+                            <constraint firstItem="LvS-IE-aFc" firstAttribute="top" secondItem="qee-K3-aDh" secondAttribute="top" constant="30" id="Y8M-Xl-XNW"/>
+                            <constraint firstItem="7Kp-71-2ne" firstAttribute="leading" secondItem="Xd8-P6-mHP" secondAttribute="trailing" constant="21" id="bS1-I5-uDx"/>
+                            <constraint firstItem="Xd8-P6-mHP" firstAttribute="top" secondItem="qee-K3-aDh" secondAttribute="top" constant="22" id="dGl-3v-Lf1"/>
+                            <constraint firstItem="7Kp-71-2ne" firstAttribute="leading" secondItem="Gya-4X-FCD" secondAttribute="leading" id="mYB-2Z-MyJ"/>
+                            <constraint firstItem="Gya-4X-FCD" firstAttribute="top" secondItem="7Kp-71-2ne" secondAttribute="bottom" constant="8" symbolic="YES" id="nev-kP-Ukl"/>
+                            <constraint firstItem="7Kp-71-2ne" firstAttribute="trailing" secondItem="Gya-4X-FCD" secondAttribute="trailing" id="rde-e5-OG5"/>
+                            <constraint firstItem="Xd8-P6-mHP" firstAttribute="centerY" secondItem="qee-K3-aDh" secondAttribute="centerY" id="zTj-4E-zbh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qee-K3-aDh" secondAttribute="bottom" id="Guq-eO-EgC"/>
+                    <constraint firstItem="qee-K3-aDh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hYL-B3-svr"/>
+                    <constraint firstItem="qee-K3-aDh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vfO-Lp-0Fi"/>
+                    <constraint firstAttribute="trailing" secondItem="qee-K3-aDh" secondAttribute="trailing" id="yhB-9j-1ad"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="AlbumImageView" destination="qee-K3-aDh" id="gEk-nr-5F4"/>
+                <outlet property="AlbumLabel" destination="Gya-4X-FCD" id="btI-Qi-FfU"/>
+                <outlet property="ArtistLabel" destination="7Kp-71-2ne" id="Wdq-2r-Lnl"/>
+                <outlet property="titleLabel" destination="LvS-IE-aFc" id="c3B-xg-k7G"/>
+            </connections>
+            <point key="canvasLocation" x="81.884057971014499" y="142.63392857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
