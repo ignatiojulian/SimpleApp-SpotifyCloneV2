@@ -16,15 +16,15 @@ open class AudioPlayerManager: NSObject {
 
 	// MARK: - Properties
 
-	open static let shared						= AudioPlayerManager()
+    public static let shared						= AudioPlayerManager()
 
 	// MARK: - Configuration
 
 	/// Set this to true if the `AudioPlayerManager` log should be enabled. The default is `false`.
-	open static var verbose						= true
+    public static var verbose						= true
 
 	/// Set this to true if the `AudioPlayerManager` log should contain detailed information about the calling class, function and line. The default is `true`
-	open static var detailedLog					= true
+    public static var detailedLog					= true
 
 	/// Set this to true to use the systems `MPNowPlayingInfoCenter` (control center and lock screen). The default value is `true`.
 	open var useNowPlayingInfoCenter				= true
@@ -173,7 +173,7 @@ open class AudioPlayerManager: NSObject {
 			if (clearQueue == true) {
 				self.clearQueue()
 			} else {
-				self.player?.seek(to: CMTimeMake(0, 1))
+                self.player?.seek(to: CMTimeMake(value: 0, timescale: 1))
 				self.pause()
 			}
 			self.callPlayStateChangeCallbacks()
@@ -223,7 +223,7 @@ open class AudioPlayerManager: NSObject {
 			}
 		} else {
 			// Move to the beginning of the track if we aren't in the beginning.
-			self.player?.seek(to: CMTimeMake(0, 1))
+            self.player?.seek(to: CMTimeMake(value: 0, timescale: 1))
 			// Update the now playing info to show the new playback time
 			self.updateNowPlayingInfoIfNeeded()
 			// Call the callbacks to inform about the new time
@@ -237,20 +237,20 @@ open class AudioPlayerManager: NSObject {
 
 	open func seek(toProgress progress: Float) {
 		let progressInSeconds = Int64(progress * (self.currentTrack?.durationInSeconds() ?? 0))
-		let time = CMTimeMake(progressInSeconds, 1)
+        let time = CMTimeMake(value: progressInSeconds, timescale: 1)
 		self.seek(toTime: time)
 	}
 
 	// MARK: - Internal helper
 
-    open func trackDidFinishPlaying() {
+    @objc open func trackDidFinishPlaying() {
         self.forward()
     }
 
     override open func observeValue(forKeyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 		if (object as? NSObject == self.player) {
 			if (forKeyPath == Keys.Status) {
-            	if self.player?.status == AVPlayerStatus.readyToPlay {
+                if self.player?.status == AVPlayer.Status.readyToPlay {
 					self.play(updateNowPlayingInfo: true)
             	}
 			}
@@ -351,7 +351,7 @@ open class AudioPlayerManager: NSObject {
 	// MARK: - Initializaiton
 
 	fileprivate func setupAudioSession() {
-		let _ = try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        let _ = try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
 		let _ = try? AVAudioSession.sharedInstance().setActive(true)
 	}
 
@@ -423,7 +423,7 @@ open class AudioPlayerManager: NSObject {
 
 	// MARK: - Plaback time change callback
 
-	func callPlaybackTimeChangeCallbacks() {
+    @objc func callPlaybackTimeChangeCallbacks() {
 		self.updateNowPlayingInfoIfNeeded()
 		// Increase the current tracks playing time if the player is playing
 		if let _currentTrack = self.currentTrack {
