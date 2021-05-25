@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+  platform :ios, '9.0'
+
+target 'iOS-Spotify' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOS-Spotify
+  pod 'RxSwift'
+  pod 'RxCocoa'  
+  pod 'ObjectMapper'
+  pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
+  pod 'Kingfisher'
+  pod 'SwiftOverlays'
+  pod 'AudioPlayerManager'
+  pod 'MarqueeLabel/Swift'
+
+  target 'iOS-SpotifyTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'iOS-SpotifyUITests' do
+    # Pods for testing
+  end
+
+end

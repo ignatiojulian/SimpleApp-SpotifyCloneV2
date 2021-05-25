@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - AudioPlayerManager (1.2.3)
+  - Kingfisher (4.10.1)
+  - MarqueeLabel/Swift (3.2.1)
+  - ObjectMapper (3.5.3)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - SwiftOverlays (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - AudioPlayerManager
+  - Kingfisher
+  - MarqueeLabel/Swift
+  - ObjectMapper
+  - RxCocoa
+  - RxSwift
+  - SwiftOverlays
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireObjectMapper
+    - AudioPlayerManager
+    - Kingfisher
+    - MarqueeLabel
+    - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftOverlays
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  AudioPlayerManager: 02601ac29abb8efc0043c851ee5f5c79e69d77fa
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MarqueeLabel: 2daf039bf916937c8a4c9adfc13577cc5e51b4ce
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SwiftOverlays: ab459ea9194b0e96aaccaa00e9ead1bf6d46eef1
+
+PODFILE CHECKSUM: e0d42343c645e473fb6e42cf75dd7285c71b758a
+
+COCOAPODS: 1.10.1
